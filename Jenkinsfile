@@ -4,9 +4,9 @@ pipeline {
     stage('Start') {
       steps {
         echo 'Build starts now'
-         sh "export M2_HOME='D:\\Maven\\apache-maven-3.6.0'"
-        sh "export JAVA_HOME='C:\\Program Files\\Java\\jdk1.6.0_45'"
-        sh 'bash  D:\\Maven\\apache-maven-3.6.0\\bin\\mvn clean install deploy -DskipTests=true -Drevision=0.3-SNAPSHOT'
+         bat "export M2_HOME='D:\\Maven\\apache-maven-3.6.0'"
+        bat "export JAVA_HOME='C:\\Program Files\\Java\\jdk1.6.0_45'"
+        bat 'bash  D:\\Maven\\apache-maven-3.6.0\\bin\\mvn clean install deploy -DskipTests=true -Drevision=0.3-SNAPSHOT'
       }
     }
     
