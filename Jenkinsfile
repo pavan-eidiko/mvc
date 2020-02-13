@@ -6,7 +6,7 @@ pipeline {
         echo 'Build starts now'
          bat "SET M2_HOME='D:\\Maven\\apache-maven-3.6.0'"
         bat "SET JAVA_HOME='C:\\Program Files\\Java\\jdk1.6.0_45'"
-        bat 'D:\\Maven\\apache-maven-3.6.0\\bin\\mvn install deploy -DskipTests=true -Drevision=0.3-SNAPSHOT'
+        bat 'D:\\Maven\\apache-maven-3.6.0\\bin\\mvn install deploy -Dhttps.protocols=TLSv1.2 package -DskipTests=true && exit %%ERRORLEVEL%%'
       }
     }
     
